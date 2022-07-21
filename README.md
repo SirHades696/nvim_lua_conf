@@ -27,6 +27,6 @@ Este repositorio se ha usado como plantilla.
 
 ## Screenshots
 
-[Screenshot](docs/1.png)
+![Screenshot](docs/1.png)
 
-[Screenshot](docs/2.png)
+![Screenshot](docs/2.png)
