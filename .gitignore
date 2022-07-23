@@ -1,1 +1,3 @@
-plugin/*
+init_old
+plugin/packer_compiled.lua
+lua-language-server/

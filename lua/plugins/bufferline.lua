@@ -38,7 +38,7 @@ bufferline.setup(
         max_name_length = 18,
         tab_size = 18,
         show_buffer_close_icons = false,
-        separator_style = "slant",
+        separator_style = "padded_slant",
         enforce_regular_tabs = false,
         color_icon = true,
         always_show_bufferline = true,
@@ -46,8 +46,8 @@ bufferline.setup(
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
           local s = " "
           for e, n in pairs(diagnostics_dict) do
-            local sym = e == "error" and " "
-              or (e == "warning" and " " or "" )
+            local sym = e == "error" and "  "
+              or (e == "warning" and "  " or "  " )
             s = s .. n .. sym
           end
           return s

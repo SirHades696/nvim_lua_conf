@@ -18,18 +18,25 @@ end
 -- nested options are documented by accessing them with `.` (eg: `:help nvim-tree.view.mappings.list`)
 
 -- Folders
-vim.cmd [[ highlight NvimTreeFolderName guifg=#7dcfff gui=bold ]]
-vim.cmd [[ highlight NvimTreeOpenedFolderName guifg=#9a6ace gui=italic,bold,underline ]]
+vim.cmd [[ highlight NvimTreeFolderName guifg=#9a6ace gui=bold ]]
+vim.cmd [[ highlight NvimTreeOpenedFolderName guifg=#7dcfff gui=italic,bold,underline ]]
 vim.cmd [[ highlight NvimTreeEmptyFolderName guifg=#f7768e gui=italic,bold ]]
-vim.cmd [[ highlight NvimTreeRootFolder guifg=#9a6ace gui=italic,bold,underline ]]
+vim.cmd [[ highlight NvimTreeRootFolder guifg=#7dcfff gui=italic,bold,underline ]]
+
 -- Indent Marker
-vim.cmd [[highlight NvimTreeIndentMarker guifg=#9A6ACE ]]
+vim.cmd [[highlight NvimTreeIndentMarker guifg=#fff2cc ]]
 
 -- Opened File
 vim.cmd [[ highlight NvimTreeOpenedFile guifg=#9ece6a gui=italic,bold ]]
 
 -- Symbolic link
 vim.cmd [[ highlight NvimTreeSymlink guifg=#08FF83 gui=italic,bold ]]
+
+-- Diagnostics
+vim.cmd [[ highlight NvimTreeLspDiagnosticsError guifg=#f7768e ]]
+vim.cmd [[ highlight NvimTreeLspDiagnosticsWarning guifg=#fff747 ]]
+vim.cmd [[ highlight NvimTreeLspDiagnosticsInformation guifg=#ff6c19 ]]
+vim.cmd [[ highlight NvimTreeLspDiagnosticsHint guifg=#8accf9 ]]
 
 nvim_tree.setup {
   auto_reload_on_write = true,
@@ -64,7 +71,7 @@ nvim_tree.setup {
   renderer = {
     add_trailing = false,
     group_empty = false,
-    highlight_git = false,
+    highlight_git = true,
     highlight_opened_files = "all",
     root_folder_modifier = ":~",
     indent_markers = {

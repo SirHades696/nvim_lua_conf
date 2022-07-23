@@ -70,9 +70,6 @@ return packer.startup(function(use)
 
   -- Color schemes
   use 'folke/tokyonight.nvim'
-  use 'navarasu/onedark.nvim'
-  use 'tanvirtin/monokai.nvim'
-  use { 'rose-pine/neovim', as = 'rose-pine' }
 
   -- Color CSS
   use 'norcalli/nvim-colorizer.lua'
