@@ -35,7 +35,7 @@ vim.cmd [[ highlight NvimTreeSymlink guifg=#08FF83 gui=italic,bold ]]
 -- Diagnostics
 vim.cmd [[ highlight NvimTreeLspDiagnosticsError guifg=#f7768e ]]
 vim.cmd [[ highlight NvimTreeLspDiagnosticsWarning guifg=#fff747 ]]
-vim.cmd [[ highlight NvimTreeLspDiagnosticsInformation guifg=#ff6c19 ]]
+vim.cmd [[ highlight NvimTreeLspDiagnosticsInformation guifg=#9ece6a ]]
 vim.cmd [[ highlight NvimTreeLspDiagnosticsHint guifg=#8accf9 ]]
 
 nvim_tree.setup {
