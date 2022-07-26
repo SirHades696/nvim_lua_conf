@@ -28,5 +28,6 @@ colorizer.setup(
         'lua',
         'python',
         'javascript',
+        'html',
     }
 )

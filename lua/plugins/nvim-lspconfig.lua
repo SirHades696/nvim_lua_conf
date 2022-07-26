@@ -86,7 +86,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+  buf_set_keymap('n', '<space>qq', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
@@ -121,17 +121,24 @@ local root_dir = function()
   return vim.fn.getcwd()
 end
 
+--local capabilities = vim.lsp.protocol.make_client_capabilities()
+--capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches.
 -- Add your language server below:
-local servers = {'clangd' , 'bashls', 'pyright', 'clangd', 'html', 'cssls', 'tsserver', 'dockerls', 'jsonls', 'sqlls'}
+local servers = {
+    'clangd' , 'bashls', 'pyright',
+    'html', 'cssls', 'tsserver', 'dockerls',
+    'jsonls', 'sqlls', 'marksman'}
+
 
 -- Call setup
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
-    root_dir = root_dir,
+    --root_dir = root_dir,
     flags = {
       -- default in neovim 0.7+
       debounce_text_changes = 150,

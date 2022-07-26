@@ -58,24 +58,35 @@ map('n', '<leader>q', ':qa!<CR>')
 -----------------------------------------------------------
 
 -- Terminal mappings
-map('n', '<leader>tr', ':Term<CR>', { noremap = true })  -- open
-map('t', '<Esc>', '<C-\\><C-n>')                    -- exit
+map('n', '<leader>tr', ':Term<CR>', { noremap = true })     -- open
+map('t', '<Esc>', '<C-\\><C-n>')                            -- exit
 
 -- NvimTree
-map('n', '<leader>t', ':NvimTreeToggle<CR>')       -- open/close
-map('n', '<C-f>', ':NvimTreeRefresh<CR>')       -- refresh
-map('n', '<C-n>', ':NvimTreeFindFile<CR>')      -- search file
+map('n', '<leader>t', ':NvimTreeToggle<CR>')                -- open/close
+map('n', '<C-f>', ':NvimTreeRefresh<CR>')                   -- refresh
+map('n', '<C-n>', ':NvimTreeFindFile<CR>')                  -- search file
 
 -- Tagbar
-map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
+map('n', '<leader>z', ':TagbarToggle<CR>')                  -- open/close
 
 -- Find / Replace
-map('n', '<leader>f', ':/' )
-map('n', '<leader>r', ':%s/')
+map('n', '<leader>ff', ':/' )                               -- Find
+map('n', '<leader>rr', ':%s/')                              -- Replace
 
 -- Bufferline
-map('n', '<leader>2', ':BufferLineCycleNext<CR>')
-map('n', '<leader>1', ':BufferLineCyclePrev<CR>')
+map('n', '<leader>2', ':BufferLineCycleNext<CR>')           -- Next buff
+map('n', '<leader>1', ':BufferLineCyclePrev<CR>')           -- Prev buff
 
 -- Markdown
-map('n', '<leader>mk', ':MarkdownPreview<CR>')
+map('n', '<leader>mk', ':MarkdownPreview<CR>')              -- Markdown prev
+
+-- Telescope
+map('n', '<S-f>', ':Telescope find_files hidden=true<CR>')     -- Find files
+map('n', '<S-g>', ':Telescope live_grep<CR>')      -- Live grep
+map('n', '<S-b>', ':Telescope buffers<CR>')        -- Search buff
+map('n', '<S-h>', ':Telescope help_tags<CR>')      -- Help tags
+
+-- Nvim Comment
+map('n', '<leader>cm', ':CommentToggle<CR>')        -- comment one line
+map('v', '<leader>cm', ':\'<,\'>CommentToggle<CR>') -- comment selected lines in visual mode
+

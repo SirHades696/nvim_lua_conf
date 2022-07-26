@@ -6,7 +6,34 @@ Este repositorio se ha usado como plantilla.
 
 [`Plantilla Original | Template`](https://github.com/brainfucksec/neovim-lua)
 
-## Configuraciones adicionales
+## Configuración general
+
+ * Lenguajes:
+ 	+ c
+ 	+ python
+ 	+ bash
+ 	+ typescript
+ 	+ json
+ 	+ vim
+ 	+ lua
+ 	+ html
+ 	+ css
+ 	+ cpp
+ 	+ javascript
+
+### Servers LSP:
+
+ * Instalación vía npm:
+
+``` bash
+sudo npm install -g bash-language-server pyright vscode-langservers-extracted typescript typescript-language-server neovim dockerfile-language-server-nodejs vscode-langservers-extracted sql-language-server
+```
+
+* Instalación para marksman
+
+    + [Marksman](https://github.com/artempyanykh/marksman#how-to-install)
+
+### Modificaciones y configuraciones adicionales
 
  * Se ha agregado los siguientes plugins:
 
@@ -14,6 +41,8 @@ Este repositorio se ha usado como plantilla.
     + [`Nvim - Colorizer`](https://github.com/norcalli/nvim-colorizer.lua)
     + [`MarkDown Preview`](https://github.com/iamcco/markdown-preview.nvim)
     + [`BufferLine`](https://github.com/akinsho/bufferline.nvim)
+    + [`Nvim comment`](https://github.com/terrortylor/nvim-comment)
+    + [`Telescope`](https://github.com/nvim-telescope/telescope.nvim)
 
  * Se han modificado los siguientes archivos para una configuración personal:
 

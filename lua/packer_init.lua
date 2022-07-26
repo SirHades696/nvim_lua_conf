@@ -42,82 +42,96 @@ end
 
 -- Install plugins
 return packer.startup(function(use)
-  -- Add you plugins here:
-  use 'wbthomason/packer.nvim' -- packer can manage itself
+      -- Add you plugins here:
+    use 'wbthomason/packer.nvim' -- packer can manage itself
 
-  -- File explorer
-  use 'kyazdani42/nvim-tree.lua'
+      -- File explorer
+    use 'kyazdani42/nvim-tree.lua'
 
-  -- Indent line
-  use 'lukas-reineke/indent-blankline.nvim'
+      -- Indent line
+    use 'lukas-reineke/indent-blankline.nvim'
 
-  -- Autopair
-  use {
-    'windwp/nvim-autopairs',
-    config = function()
-      require('nvim-autopairs').setup{}
-    end
-  }
+      -- Autopair
+    use {
+        'windwp/nvim-autopairs',
+        config = function()
+          require('nvim-autopairs').setup{}
+        end
+      }
 
-  -- Icons
-  use 'kyazdani42/nvim-web-devicons'
+      -- Icons
+    use 'kyazdani42/nvim-web-devicons'
 
-  -- Tag viewer
-  use 'preservim/tagbar'
+      -- Tag viewer
+    use 'preservim/tagbar'
 
-  -- Treesitter interface
-  use 'nvim-treesitter/nvim-treesitter'
+      -- Treesitter interface
+    use 'nvim-treesitter/nvim-treesitter'
 
-  -- Color schemes
-  use 'folke/tokyonight.nvim'
+      -- Color schemes
+    use 'folke/tokyonight.nvim'
 
-  -- Color CSS
-  use 'norcalli/nvim-colorizer.lua'
+      -- Color CSS
+    use 'norcalli/nvim-colorizer.lua'
 
-  -- LSP
-  use 'neovim/nvim-lspconfig'
+      -- LSP
+    use 'neovim/nvim-lspconfig'
 
-  -- Autocomplete
-  use {
-    'hrsh7th/nvim-cmp',
-    requires = {
-      'L3MON4D3/LuaSnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-buffer',
-      'saadparwaiz1/cmp_luasnip',
-    },
-  }
+      -- Autocomplete
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+          'L3MON4D3/LuaSnip',
+          'hrsh7th/cmp-nvim-lsp',
+          'hrsh7th/cmp-path',
+          'hrsh7th/cmp-buffer',
+          'saadparwaiz1/cmp_luasnip',
+        },
+      }
 
-  -- Statusline
-  use {
-    'feline-nvim/feline.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
-  }
+      -- Statusline
+    use {
+        'feline-nvim/feline.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons' },
+      }
 
-  -- Bufferline
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+      -- Bufferline
+    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
-  -- git labels
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      require('gitsigns').setup{}
-    end
-  }
+      -- git labels
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+          require('gitsigns').setup{}
+        end
+      }
 
-  -- Dashboard (start screen)
-  use {
-    'goolord/alpha-nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
-  }
+      -- Dashboard (start screen)
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'kyazdani42/nvim-web-devicons' },
+      }
 
-  -- MarkDown preview
-  use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
+      -- MarkDown preview
+    use({
+            "iamcco/markdown-preview.nvim",
+            run = function() vim.fn["mkdp#util#install"]() end,
+        })
+
+    -- fast loading nvim
+    use 'lewis6991/impatient.nvim'
+
+
+    -- Telescope
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    -- Nvim Comment
+    use "terrortylor/nvim-comment"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
