@@ -27,7 +27,7 @@ vim.cmd [[ highlight NvimTreeRootFolder guifg=#7dcfff gui=italic,bold,underline 
 vim.cmd [[highlight NvimTreeIndentMarker guifg=#fff2cc ]]
 
 -- Opened File
-vim.cmd [[ highlight NvimTreeOpenedFile guifg=#9ece6a gui=italic,bold ]]
+vim.cmd [[ highlight NvimTreeOpenedFile gui=italic,bold ]]
 
 -- Symbolic link
 vim.cmd [[ highlight NvimTreeSymlink guifg=#08FF83 gui=italic,bold ]]

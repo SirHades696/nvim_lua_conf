@@ -59,6 +59,13 @@ return packer.startup(function(use)
         end
       }
 
+    -- autotags
+    use {'windwp/nvim-ts-autotag',
+        config= function()
+            require('nvim-ts-autotag').setup{}
+        end
+    }
+
       -- Icons
     use 'kyazdani42/nvim-web-devicons'
 
@@ -66,7 +73,7 @@ return packer.startup(function(use)
     use 'preservim/tagbar'
 
       -- Treesitter interface
-    use 'nvim-treesitter/nvim-treesitter'
+    use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
 
       -- Color schemes
     use 'folke/tokyonight.nvim'
@@ -88,7 +95,7 @@ return packer.startup(function(use)
           'saadparwaiz1/cmp_luasnip',
         },
       }
-
+    use "jose-elias-alvarez/null-ls.nvim"
       -- Statusline
     use {
         'feline-nvim/feline.nvim',
@@ -132,6 +139,9 @@ return packer.startup(function(use)
 
     -- Nvim Comment
     use "terrortylor/nvim-comment"
+
+    -- Trouble
+    use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = "require('plugins/trouble')"}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

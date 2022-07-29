@@ -90,3 +90,8 @@ map('n', '<S-h>', ':Telescope help_tags<CR>')      -- Help tags
 map('n', '<leader>cm', ':CommentToggle<CR>')        -- comment one line
 map('v', '<leader>cm', ':\'<,\'>CommentToggle<CR>') -- comment selected lines in visual mode
 
+-- Trouble
+map('n', '<leader>xw', ':TroubleToggle workspace_diagnostics<CR>')  --workspace
+map('n', '<leader>xd', ':TroubleToggle document_diagnostics<CR>')   --document
+map('n', '<leader>xq', ':TroubleToggle quickfix<CR>')               --quickfix
+map('n', '<leader>xl', ':TroubleToggle loclist<CR>')                --loclist

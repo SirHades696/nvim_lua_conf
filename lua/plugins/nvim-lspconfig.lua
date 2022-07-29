@@ -130,7 +130,7 @@ end
 local servers = {
     'clangd' , 'bashls', 'pyright',
     'html', 'cssls', 'tsserver', 'dockerls',
-    'jsonls', 'sqlls', 'marksman'}
+    'jsonls', 'sqlls', 'marksman',  'tailwindcss'}
 
 
 -- Call setup
@@ -138,10 +138,18 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
-    --root_dir = root_dir,
+    root_dir = root_dir,
     flags = {
       -- default in neovim 0.7+
       debounce_text_changes = 150,
     }
   }
+end
+
+-- Change letters for icons
+local signs = { Error = " ", Warn = " ", Hint = " ﯦ", Info = " " }
+
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end

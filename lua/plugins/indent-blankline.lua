@@ -20,30 +20,35 @@ vim.cmd [[highlight IndentBlanklineIndent5 guifg=#FF8E1E gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C2C2C2 gui=nocombine]]
 
 indent_blankline.setup {
-  char = "┊",
-  use_treesitter = true,
-  show_first_indent_level = false,
-  filetype_exclude = {
-    'help',
-    'dashboard',
-    'git',
-    'markdown',
-    'text',
-    'terminal',
-    'lspinfo',
-    'packer',
-    'NvimTree',
-  },
-  buftype_exclude = {
-    'terminal',
-    'nofile',
-  },
-  char_highlight_list = {
-      "IndentBlanklineIndent1",
-      "IndentBlanklineIndent2",
-      "IndentBlanklineIndent3",
-      "IndentBlanklineIndent4",
-      "IndentBlanklineIndent5",
-      "IndentBlanklineIndent6",
-  }
+    char = "┊",
+    char_blankline= " ",
+    use_treesitter = true,
+    show_first_indent_level = false,
+    show_end_of_line = true,
+    space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+    filetype_exclude = {
+        'help',
+        'dashboard',
+        'git',
+        'markdown',
+        'text',
+        'terminal',
+        'lspinfo',
+        'packer',
+        'NvimTree',
+    },
+    buftype_exclude = {
+        'terminal',
+        'nofile',
+    },
+    char_highlight_list = {
+        "IndentBlanklineIndent1",
+        "IndentBlanklineIndent2",
+        "IndentBlanklineIndent3",
+        "IndentBlanklineIndent4",
+        "IndentBlanklineIndent5",
+        "IndentBlanklineIndent6",
+    }
 }
