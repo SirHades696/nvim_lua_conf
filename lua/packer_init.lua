@@ -143,6 +143,9 @@ return packer.startup(function(use)
     -- Trouble
     use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = "require('plugins/trouble')"}
 
+    -- Mason Packages
+    use { "williamboman/mason.nvim" }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

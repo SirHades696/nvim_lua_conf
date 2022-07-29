@@ -31,4 +31,4 @@ require('plugins/nvim-lspconfig')
 require('plugins/nvim-treesitter')
 require('plugins/null-ls')
 require('plugins/alpha-nvim')
-
+require('plugins/mason')
