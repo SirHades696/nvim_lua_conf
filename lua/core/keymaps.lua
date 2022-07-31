@@ -58,7 +58,7 @@ map('n', '<leader>q', ':qa!<CR>')
 -----------------------------------------------------------
 
 -- Terminal mappings
-map('n', '<leader>tr', ':Term<CR>', { noremap = true })     -- open
+map('n', '<leader>tr', ':ToggleTerm direction=float<CR>')     -- open
 map('t', '<Esc>', '<C-\\><C-n>')                            -- exit
 
 -- NvimTree

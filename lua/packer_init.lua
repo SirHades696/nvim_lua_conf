@@ -146,8 +146,13 @@ return packer.startup(function(use)
     -- Mason Packages
     use { "williamboman/mason.nvim" }
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
+    -- Toggle Terminal
+    use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+      require("toggleterm").setup()
+    end}
+
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
   if packer_bootstrap then
     require('packer').sync()
   end
