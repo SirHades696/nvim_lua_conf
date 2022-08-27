@@ -23,7 +23,10 @@ bufferline.setup(
             highlight = "Directory",
             text_align = "center"
         }},
-        indicator_icon = '▎',
+        indicator = {
+            icon = '▎',
+            style = 'icon'
+        },
         modified_icon = '●',
         left_trunc_marker = '',
         right_trunc_marker = '',
