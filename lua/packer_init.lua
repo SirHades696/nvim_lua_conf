@@ -149,11 +149,13 @@ return packer.startup(function(use)
     -- Toggle Terminal
     use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
       require("toggleterm").setup()
-    end}
+    end
+    }
 
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-  if packer_bootstrap then
+    -- Snippets
+    use "rafamadriz/friendly-snippets"
+
+    if packer_bootstrap then
     require('packer').sync()
   end
 end)
