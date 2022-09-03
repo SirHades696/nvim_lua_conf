@@ -24,7 +24,7 @@ vim.cmd [[ highlight NvimTreeEmptyFolderName guifg=#f7768e gui=italic,bold ]]
 vim.cmd [[ highlight NvimTreeRootFolder guifg=#7dcfff gui=italic,bold,underline ]]
 
 -- Indent Marker
-vim.cmd [[highlight NvimTreeIndentMarker guifg=#fff2cc ]]
+vim.cmd [[highlight NvimTreeIndentMarker guifg=#83ff63 ]]
 
 -- Opened File
 vim.cmd [[ highlight NvimTreeOpenedFile gui=italic,bold ]]
@@ -37,6 +37,11 @@ vim.cmd [[ highlight NvimTreeLspDiagnosticsError guifg=#f7768e ]]
 vim.cmd [[ highlight NvimTreeLspDiagnosticsWarning guifg=#fff747 ]]
 vim.cmd [[ highlight NvimTreeLspDiagnosticsInformation guifg=#9ece6a ]]
 vim.cmd [[ highlight NvimTreeLspDiagnosticsHint guifg=#8accf9 ]]
+
+-- Folders
+vim.cmd [[ highlight NvimTreeFolderIcon guifg=#7dcfff ]]
+
+
 
 nvim_tree.setup {
     auto_reload_on_write = true,
