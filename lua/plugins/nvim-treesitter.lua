@@ -24,4 +24,19 @@ nvim_treesitter.setup {
     -- `false` will disable the whole extension
     enable = true,
   },
+  rainbow = {
+    enable = true,
+    colors = {
+      "DodgerBlue",
+      "Gold",
+      "LawnGreen",
+      -- "Gold",
+      -- "Orchid",
+      -- "DodgerBlue",
+      -- "Cornsilk",
+      -- "Salmon",
+      -- "LawnGreen",
+    },
+    disable = { "html" },
+  },
 }
