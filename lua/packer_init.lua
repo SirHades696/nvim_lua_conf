@@ -156,6 +156,12 @@ return packer.startup(function(use)
     -- Snippets
     use "rafamadriz/friendly-snippets"
 
+    -- Docstrings
+    use {
+        'kkoomen/vim-doge',
+        run = ':call doge#install()'
+    }
+
     if packer_bootstrap then
     require('packer').sync()
   end
