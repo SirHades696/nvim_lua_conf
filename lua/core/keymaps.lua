@@ -81,10 +81,10 @@ map('n', '<leader>1', ':BufferLineCyclePrev<CR>')           -- Prev buff
 map('n', '<leader>mk', ':MarkdownPreview<CR>')              -- Markdown prev
 
 -- Telescope
-map('n', '<S-f>', ':Telescope find_files hidden=true<CR>')     -- Find files
-map('n', '<S-g>', ':Telescope live_grep<CR>')      -- Live grep
-map('n', '<S-b>', ':Telescope buffers<CR>')        -- Search buff
-map('n', '<S-h>', ':Telescope help_tags<CR>')      -- Help tags
+map('n', '<leader>tf', ':Telescope find_files hidden=true<CR>')     -- Find files
+map('n', '<leader>tg', ':Telescope live_grep<CR>')      -- Live grep
+map('n', '<leader>tb', ':Telescope buffers<CR>')        -- Search buff
+map('n', '<leader>tht', ':Telescope help_tags<CR>')      -- Help tags
 
 -- Nvim Comment
 map('n', '<leader>cm', ':CommentToggle<CR>')        -- comment one line
@@ -94,4 +94,4 @@ map('v', '<leader>cm', ':\'<,\'>CommentToggle<CR>') -- comment selected lines in
 map('n', '<leader>xw', ':TroubleToggle workspace_diagnostics<CR>')  --workspace
 map('n', '<leader>xd', ':TroubleToggle document_diagnostics<CR>')   --document
 map('n', '<leader>xq', ':TroubleToggle quickfix<CR>')               --quickfix
-map('n', '<leader>xl', ':TroubleToggle loclist<CR>')                --loclist
+map('n', '<leader>xl', ':TroubleToggle loclist<CR>')                --loclit
