@@ -130,7 +130,7 @@ end
 local servers = {
     'clangd' , 'bashls', 'pyright',
     'html', 'cssls', 'tsserver', 'dockerls',
-    'jsonls', 'sqlls', 'marksman',  'tailwindcss', 'sumneko_lua'}
+    'jsonls', 'sqlls', 'marksman',  'tailwindcss', 'lua_ls'} --'sumneko_lua'}
 
 
 -- Call setup
