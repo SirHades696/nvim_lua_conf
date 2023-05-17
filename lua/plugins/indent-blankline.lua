@@ -20,7 +20,7 @@ vim.cmd [[highlight IndentBlanklineIndent5 guifg=#FF8E1E gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C2C2C2 gui=nocombine]]
 
 indent_blankline.setup {
-    char = "┊",
+    char = "¦",
     char_blankline= " ",
     use_treesitter = true,
     show_first_indent_level = false,
