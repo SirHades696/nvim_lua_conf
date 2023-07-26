@@ -15,7 +15,7 @@ local diagnostics = null_ls.builtins.diagnostics
 
 -- url sources: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 local sources = {
-  formatting.black, -- "python"
+  formatting.blackd_client, -- "python"
   formatting.eslint_d, -- "javascript", "javascriptreact", "typescript", "typescriptreact", "vue"
   formatting.json_tool, -- "json"
   formatting.phpcsfixer, --  "php"

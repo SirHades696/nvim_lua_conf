@@ -52,7 +52,7 @@ map('i', '<leader>w', '<C-c>:w<CR>')
 
 -- Close all windows and exit from Neovim with <leader> and q
 map('n', '<leader>q', ':qa!<CR>')
-map('n', '<leader>c', ':q<CR>')
+map('n', '<leader>cl', ':q<CR>')
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
