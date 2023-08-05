@@ -11,6 +11,9 @@ if not status_ok then
 end
 
 local actions = require('telescope.actions')
+
+require("telescope").load_extension("persisted")
+
 telescope.setup({
     defaults = {
         layout_config = {
@@ -56,5 +59,10 @@ telescope.setup({
                 ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
             }
         }
+    },
+    extensions = {
+    persisted = {
+      layout_config = { width = 0.55, height = 0.55 }
     }
+  }
 })

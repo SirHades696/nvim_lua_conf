@@ -85,6 +85,9 @@ local disabled_built_ins = {
    "ftplugin",
 }
 
+-- Persisted plugin
+vim.o.sessionoptions = "buffers,curdir,folds,globals,tabpages,winpos,winsize"
+
 for _, plugin in pairs(disabled_built_ins) do
    g["loaded_" .. plugin] = 1
 end

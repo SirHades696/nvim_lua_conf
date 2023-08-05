@@ -33,3 +33,11 @@ require('plugins/null-ls')
 require('plugins/alpha-nvim')
 require('plugins/mason')
 require('plugins/snippets')
+require('plugins/persisted')
+
+-- init.lua
+vim.api.nvim_create_autocmd({ "VimLeave" }, {
+  callback = function()
+    vim.fn.jobstart('notify-send "NVIM CLOSE"', {detach=true})
+  end,
+})

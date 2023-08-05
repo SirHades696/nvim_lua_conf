@@ -162,6 +162,16 @@ return packer.startup(function(use)
         run = ':call doge#install()'
     }
 
+
+    -- Persisted
+    -- Lua
+    use({
+          "olimorris/persisted.nvim",
+          config = function()
+            require("persisted").setup()
+          end,
+    })
+
     if packer_bootstrap then
     require('packer').sync()
   end
