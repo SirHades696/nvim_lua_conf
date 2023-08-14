@@ -96,3 +96,7 @@ map('n', '<leader>xw', ':TroubleToggle workspace_diagnostics<CR>')  --workspace
 map('n', '<leader>xd', ':TroubleToggle document_diagnostics<CR>')   --document
 map('n', '<leader>xq', ':TroubleToggle quickfix<CR>')               --quickfix
 map('n', '<leader>xl', ':TroubleToggle loclist<CR>')                --loclit
+
+-- Persisted
+map('n', '<leader>sv', ':SessionSave<CR>')              -- Session Save
+map('n', '<leader>osv', ':Telescope persisted<CR>')     -- Open sessions with telescope
